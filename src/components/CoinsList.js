@@ -1,6 +1,6 @@
 import CoinItem from "./CoinItem";
 
-const Coins = ({ coins }) => {
+const CoinsList = ({ coins }) => {
   // console.log(coins);
   return (
     <div>
@@ -17,4 +17,4 @@ const Coins = ({ coins }) => {
   );
 };
 
-export default Coins;
+export default CoinsList;

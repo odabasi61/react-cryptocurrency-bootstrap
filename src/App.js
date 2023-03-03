@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Coins from "./components/Coins";
+import CoinsList from "./components/CoinsList";
+import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import Coin from "./routes/Coin";
 
 function App() {
   // we leave an empty array here. soon we will return the cryptocurrency.
@@ -22,8 +25,14 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <Coins coins={coins} />
+    <div className="App pb-3">
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<CoinsList coins={coins} />} />
+        <Route path="/coin" element={<Coin />}>
+          <Route path=":coinId" element={<Coin />} />
+        </Route>
+      </Routes>
     </div>
   );
 }
