@@ -9,10 +9,7 @@ const CoinItem = ({ coins }) => {
       {coins.map((coin) => {
         return (
           <Link to={`/coin/${coin.id}`} element={<Coin />} key={coin.id}>
-            <div
-              type="button"
-              className="d-flex justify-content-between mb-3 rounded-3 p-2 coinTable"
-            >
+            <div className="d-flex justify-content-between mb-3 rounded-3 p-2 coinTable">
               <p>{coin.market_cap_rank}</p>
               <div className="d-flex gap-1">
                 <img src={coin.image} alt={coin.symbol} width={"25px"} />
