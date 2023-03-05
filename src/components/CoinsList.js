@@ -1,6 +1,6 @@
 import CoinItem from "./CoinItem";
 
-const CoinsList = ({ coins }) => {
+const CoinsList = ({ coins, search, setSearch }) => {
   // console.log(coins);
   return (
     <div>
@@ -12,7 +12,7 @@ const CoinsList = ({ coins }) => {
         <p>Volume</p>
         <p>Market Cap</p>
       </div>
-      <CoinItem coins={coins} />
+      <CoinItem coins={coins} search={search} setSearch={setSearch} />
     </div>
   );
 };

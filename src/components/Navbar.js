@@ -1,7 +1,7 @@
 import { FaCoins } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ search, setSearch }) => {
   return (
     <div>
       <div className="d-flex align-items-center gap-4 justify-content-center py-4">
@@ -17,6 +17,8 @@ const Navbar = () => {
           <input
             type="search"
             className="w-50 rounded-2 py-1 px-2 border border-none"
+            placeholder="Search coins..."
+            onChange={(e) => setSearch(e.target.value)}
           />
         </form>
       </div>
